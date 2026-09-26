@@ -1,0 +1,46 @@
+{
+  "name": "iobroker.ecoflow-api",
+  "version": "0.1.6",
+  "description": "ioBroker adapter for the official EcoFlow API",
+  "keywords": [
+    "ioBroker",
+    "EcoFlow",
+    "API",
+    "smart home"
+  ],
+  "author": "OpenAI",
+  "license": "MIT",
+  "main": "main.js",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@iobroker/adapter-core": "^3.4.1"
+  },
+  "devDependencies": {
+    "@iobroker/adapter-core": "^3.4.1"
+  },
+  "iobroker": {
+    "tier": 3,
+    "type": "iot-systems",
+    "titleLang": {
+      "en": "EcoFlow API",
+      "de": "EcoFlow API"
+    },
+    "news": {
+      "0.1.0": {
+        "en": "Initial release",
+        "de": "Erste Version"
+      },
+      "0.1.2": {
+        "en": "Improved EcoFlow signing, credential normalization and automatic clock-offset retry.",
+        "de": "EcoFlow-Signatur, Bereinigung der Zugangsdaten und automatische Zeitkorrektur verbessert."
+      },
+      "0.1.6": {
+        "en": "Retained all returned parameters, limited device/parameter failure warnings to once per instance run, and made API credentials visible in configuration.",
+        "de": "Alle zurückgegebenen Parameter bleiben erhalten, Fehlerwarnungen je Gerät/Parameter erscheinen nur einmal pro Instanzlauf und API-Zugangsdaten sind im Konfigurationsdialog sichtbar."
+      }
+    }
+  }
+}

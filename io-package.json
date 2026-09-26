@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "ecoflow-api",
-    "version": "0.1.6",
+    "version": "0.1.7",
     "news": {
       "0.1.0": {
         "en": "Initial release",
@@ -30,6 +30,10 @@
       "0.1.5": {
         "en": "Added physical units to known dynamically created EcoFlow parameter states.",
         "de": "Physikalische Einheiten für bekannte dynamisch angelegte EcoFlow-Parameter ergänzt."
+      },
+      "0.1.7": {
+        "en": "Updated README with instructions for obtaining EcoFlow API credentials.",
+        "de": "README um eine Anleitung zur Beantragung und Beschaffung der EcoFlow API-Zugangsdaten ergänzt."
       }
     },
     "title": "EcoFlow API",

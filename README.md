@@ -1,6 +1,6 @@
 # ioBroker.ecoflow-api
 
-Version 0.1.6
+Version 0.1.7
 
 ioBroker adapter for the official EcoFlow Public API.
 
@@ -30,7 +30,17 @@ ioBroker adapter for the official EcoFlow Public API.
 - EcoFlow API Secret Key
 - Detailed debug logging (enabled by default)
 
-The API key pair is generated through the EcoFlow developer portal.
+### API-Key und API-Secret beantragen
+
+Für den Zugriff auf die EcoFlow Public API benötigst du einen **Access Key (API-Key)** und einen **Secret Key (API-Secret)**. Diese Zugangsdaten werden im EcoFlow Developer Portal erstellt; sie sind nicht identisch mit dem Passwort deines EcoFlow-Kontos.
+
+1. Öffne das [EcoFlow Developer Portal für Europa](https://developer-eu.ecoflow.com/) (für andere Regionen gegebenenfalls das passende regionale Portal).
+2. Melde dich mit deinem EcoFlow-Konto an. Falls du noch kein Developer-Zugriff hast, wähle **Become a Developer** bzw. die entsprechende Option zum Beantragen des Entwicklerzugangs und reiche die angeforderten Angaben ein.
+3. Warte, bis EcoFlow den Developer-Zugang freigeschaltet hat. Die Bearbeitungszeit kann variieren; prüfe auch den Spam-Ordner und melde dich später erneut im Portal an, falls noch keine Freigabe sichtbar ist.
+4. Öffne nach der Freischaltung im Portal die Verwaltung der Access Keys bzw. den Bereich **Security** (für das EU-Portal: [Key-Verwaltung](https://developer-eu.ecoflow.com/us/security)). Erstelle dort ein neues Schlüsselpaar und kopiere sowohl den Access Key als auch den Secret Key.
+5. Trage beide Werte in der ioBroker-Adapterkonfiguration in **API-Key** und **API-Secret** ein. Wähle außerdem die Region passend zu deinem EcoFlow-API-Zugang.
+
+Behandle beide Schlüssel vertraulich und veröffentliche sie nicht in GitHub, Screenshots oder Logs. Bewahre das Secret sicher auf; wenn es im Portal nicht erneut angezeigt werden kann, musst du gegebenenfalls ein neues Schlüsselpaar erzeugen. Weitere Informationen stehen in der [EcoFlow API-Dokumentation](https://developer-eu.ecoflow.com/us/document/introduction).
 
 ## Object tree
 
@@ -96,3 +106,8 @@ Known EcoFlow quota parameters now receive a physical unit in the ioBroker objec
 ## Version 0.1.6
 
 All parameters returned by EcoFlow are retained; unit detection only adds metadata and never filters unknown parameters. A device query failure is logged as a warning once per device per instance run; repeated failures are available in debug logging. Parameter object update warnings are likewise limited to once per parameter per instance run. API Access Key and Secret Key fields are displayed as visible text in the configuration form.
+
+
+## Version 0.1.7
+
+Das README enthält jetzt eine Anleitung zur Beantragung des EcoFlow-Developer-Zugangs und zum Erstellen und Eintragen von API-Key und API-Secret.

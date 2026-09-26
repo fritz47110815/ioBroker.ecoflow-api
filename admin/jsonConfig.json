@@ -1,0 +1,105 @@
+{
+  "type": "panel",
+  "items": {
+    "region": {
+      "type": "select",
+      "label": {
+        "en": "Region",
+        "de": "Region"
+      },
+      "sm": 12,
+      "options": [
+        {
+          "label": {
+            "en": "Europe",
+            "de": "Europa"
+          },
+          "value": "eu"
+        },
+        {
+          "label": {
+            "en": "North America",
+            "de": "Nordamerika"
+          },
+          "value": "us"
+        },
+        {
+          "label": {
+            "en": "Global / other",
+            "de": "Global / Sonstige"
+          },
+          "value": "global"
+        },
+        {
+          "label": {
+            "en": "Australia / Asia-Pacific",
+            "de": "Australien / Asien-Pazifik"
+          },
+          "value": "apac"
+        }
+      ],
+      "default": "eu",
+      "help": {
+        "en": "Select the region that matches your EcoFlow API credentials.",
+        "de": "Wählen Sie die Region, die zu Ihren EcoFlow-API-Zugangsdaten passt."
+      }
+    },
+    "pollInterval": {
+      "type": "number",
+      "label": {
+        "en": "Poll frequency (seconds)",
+        "de": "Abfrageintervall (Sekunden)"
+      },
+      "sm": 12,
+      "min": 10,
+      "max": 86400,
+      "step": 1,
+      "default": 60,
+      "help": {
+        "en": "Minimum 10 seconds. The adapter polls the device list and then every device.",
+        "de": "Mindestens 10 Sekunden. Der Adapter fragt die Geräteliste und anschließend jedes Gerät ab."
+      }
+    },
+    "accessKey": {
+      "type": "text",
+      "label": {
+        "en": "API key / Access Key",
+        "de": "API-Key / Access Key"
+      },
+      "sm": 12,
+      "trim": true,
+      "required": true,
+      "help": {
+        "en": "EcoFlow Public API Access Key.",
+        "de": "Access Key der EcoFlow Public API."
+      }
+    },
+    "secretKey": {
+      "type": "text",
+      "label": {
+        "en": "API secret / Secret Key",
+        "de": "API-Secret / Secret Key"
+      },
+      "sm": 12,
+      "trim": true,
+      "required": true,
+      "help": {
+        "en": "EcoFlow Public API Secret Key.",
+        "de": "Secret Key der EcoFlow Public API."
+      }
+    },
+    "debugLogging": {
+      "type": "checkbox",
+      "label": {
+        "en": "Detailed debug logging",
+        "de": "Ausführliches Debug-Logging"
+      },
+      "sm": 12,
+      "default": true,
+      "help": {
+        "en": "Also writes detailed diagnostic messages to the normal info log. Disable if the log is too verbose.",
+        "de": "Schreibt ausführliche Diagnosemeldungen zusätzlich ins normale Info-Log. Deaktivieren, wenn das Log zu umfangreich wird."
+      }
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "common": {
+    "name": "ecoflow-api",
+    "version": "0.1.6",
+    "news": {
+      "0.1.0": {
+        "en": "Initial release",
+        "de": "Erste Version"
+      },
+      "0.1.1": {
+        "en": "Fixed EcoFlow API signature generation and localized configuration UI.",
+        "de": "EcoFlow-Signaturerzeugung korrigiert und lokalisierte Konfigurationsoberfläche ergänzt."
+      },
+      "0.1.2": {
+        "en": "Improved EcoFlow signing, credential normalization and automatic clock-offset retry.",
+        "de": "EcoFlow-Signatur, Bereinigung der Zugangsdaten und automatische Zeitkorrektur verbessert."
+      },
+      "0.1.3": {
+        "en": "EcoFlow request signing aligned exactly with the working reference implementation, including query-string signing and User-Agent.",
+        "de": "EcoFlow-Signierung exakt an die funktionierende Referenzimplementierung angepasst, einschließlich Query-String-Signatur und User-Agent."
+      },
+      "0.1.4": {
+        "en": "Added visible detailed debug logging and replaced the adapter icon with the EcoFlow company logo.",
+        "de": "Ausführliches sichtbares Debug-Logging ergänzt und das Adapter-Icon durch das EcoFlow-Firmenlogo ersetzt."
+      },
+      "0.1.6": {
+        "en": "Retained all returned parameters, limited device/parameter failure warnings to once per instance run, and made API credentials visible in configuration.",
+        "de": "Alle zurückgegebenen Parameter bleiben erhalten, Fehlerwarnungen je Gerät/Parameter erscheinen nur einmal pro Instanzlauf und API-Zugangsdaten sind im Konfigurationsdialog sichtbar."
+      },
+      "0.1.5": {
+        "en": "Added physical units to known dynamically created EcoFlow parameter states.",
+        "de": "Physikalische Einheiten für bekannte dynamisch angelegte EcoFlow-Parameter ergänzt."
+      }
+    },
+    "title": "EcoFlow API",
+    "titleLang": {
+      "en": "EcoFlow API",
+      "de": "EcoFlow API"
+    },
+    "desc": {
+      "en": "Reads all registered EcoFlow devices and their parameters via the official API.",
+      "de": "Liest alle registrierten EcoFlow-Geräte und deren Parameter über die offizielle API."
+    },
+    "platform": "Javascript/Node.js",
+    "mode": "daemon",
+    "materialize": true,
+    "messagebox": true,
+    "compact": true,
+    "connectionType": "cloud",
+    "dataSource": "poll",
+    "adminUI": {
+      "config": "json"
+    },
+    "icon": "ecoflow-api.png"
+  },
+  "native": {
+    "region": "eu",
+    "pollInterval": 60,
+    "accessKey": "",
+    "secretKey": "",
+    "debugLogging": true
+  },
+  "objects": [],
+  "instanceObjects": [
+    {
+      "_id": "info.connection",
+      "type": "state",
+      "common": {
+        "name": "Connection",
+        "type": "boolean",
+        "role": "indicator.connected",
+        "read": true,
+        "write": false,
+        "def": false
+      },
+      "native": {}
+    }
+  ]
+}
